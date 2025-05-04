@@ -1,10 +1,10 @@
 <?php
 
+use core\App;
 use core\Validator;
 use core\Database;
 
-$config = require base_path('config.php');
-$db = new Database($config['database']);
+$db = App::resolve(Database::class);;
 
 $errors = [];
 

@@ -9,9 +9,8 @@ spl_autoload_register(function ($class) {
    
    require base_path("{$class}.php");
 });
-// require base_path('Database.php');
-// require base_path('core/Response.php');
-// require base_path("core/router.php");
+
+require base_path('bootstrap.php');
 
 $router = new \core\Router();
 

@@ -24,9 +24,9 @@ class Router
         $this->add($uri, "POST", $controller);
     }
 
-    public function petch($uri, $controller)
+    public function patch($uri, $controller)
     {
-        $this->add($uri, "PETCH", $controller);
+        $this->add($uri, "PATCH", $controller);
     }
 
     public function delete($uri, $controller)

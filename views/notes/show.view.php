@@ -4,17 +4,20 @@
 
 <main>
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-       
-            <a href="/notes" class="mb-4 hover:underline text-blue-500">Go Back...</a>
-           <p>
-                <?= $note['body'] ?>
-            </p>
 
+        <a href="/notes" class="mb-4 hover:underline text-blue-500">Go Back...</a>
+        <p>
+            <?= $note['body'] ?>
+        </p>
+        <!-- 
             <form method="POST">
                 <input type="hidden" name="_method" value="DELETE">
                 <input type="hidden" name="id" value="<?= $note['id'] ?>">
                 <button class="text-red-500 mt-6 hover:underline">Delete</a>
-            </form>
+            </form> -->
+        <footer class="mt-6">
+            <a href="note/edit?id=<?= $note['id'] ?>" class="border px-3 py-1 rounded border-gray-500">Edit</a>
+        </footer>
 
     </div>
 </main>

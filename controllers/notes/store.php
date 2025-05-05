@@ -8,7 +8,7 @@ $db = App::resolve(Database::class);;
 
 $errors = [];
 
-if (! Validator::string($_POST['body'], 1, 10)) {
+if (! Validator::string($_POST['body'], 1, 100)) {
     $errors['body'] = 'A body is required and note more than 10 characters';
 }
 

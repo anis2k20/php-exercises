@@ -1,6 +1,7 @@
 <?php
 
 use core\Authenticator;
+use core\Session;
 use Http\Forms\LoginForm;
 
 
@@ -15,8 +16,17 @@ if ($form->validate($email, $password)) {
     $form->error('email', 'No matching email found');
 }
 
+// $_SESSION['_flashed']['errors'] = $form->errors(); 
+Session::flash('errors', $form->errors());
 
-return view('sessions/create.view.php', [
-    'errors' => $form->errors(),
+Session::flash('old',[
+    'email' => $_POST['email']
 ]);
+
+redirect('/login');
+
+
+// return view('sessions/create.view.php', [
+//     'errors' => $form->errors(),
+// ]);
 

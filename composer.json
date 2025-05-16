@@ -1,0 +1,12 @@
+{
+    "name": "anis/demo",
+    "description": "null",
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "core\\": "core/",
+            "Http\\": "Http/"
+        }
+    }
+}
